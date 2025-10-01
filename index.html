@@ -1,20 +1,197 @@
+<!DOCTYPE html>
 <html>
 
+<head>
+    <title>HTML Table Cheatsheet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6 "></script>
+    <script id="MathJax-script " async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js "></script>
+    <link rel=" preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap " rel="stylesheet ">
+</head>
+
 <body>
-  <h1>Nicole Kelledy</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-  <h2>I have been working on my skills!</h2>
-  <p>I can write in HTML and style in CSS code.</p>
-  <ol>
-    <li>I know how to use Github</li>
-    <li>I can use the Command Line in Bash/GitBash</li>
-    <li>I can style CSS with HEX, HSL and RGB coloring</li>
-  </ol>
-  <h2>What I am currently learning.</h2>
-  <p>I am finishing up with CSS styling and since I have already put time in with JS, this next section will mainly be a refresher before I move onto learning React and Redux</p>
-  <h2>What is my goal?</h2>
-  <p>My goal is to be a front-end engineer. Eventually I will become a full-stack developer, but I am a mom and I take my wins with gratitude.</p>
+    <h1>HTML Table Cheatsheet</h1>
+    <h2>Use these components to create a well laid out table</h2>
+    <!-- Table demonstrating HTML table elements -->
+    <table id="cheatsheet-table ">
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>Defines a table</td>
+                <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>Defines a table row</td>
+                <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>Defines a table header cell</td>
+                <td><code>&lt;th&gt;Header&lt;/th&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>Defines a table data cell</td>
+                <td><code>&lt;td&gt;Data&lt;/td&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;thead&gt;</td>
+                <td>Groups the header content in a table</td>
+                <td><code>&lt;thead&gt;...&lt;/thead&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>Groups the body content in a table</td>
+                <td><code>&lt;tbody&gt;...&lt;/tbody&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>Groups the footer content in a table</td>
+                <td><code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code></td>
+            </tr>
+            <tr>
+                <td>&lt;caption&gt;</td>
+                <td>Defines a table caption</td>
+                <td><code>&lt;caption&gt;Table Caption&lt;/caption&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>The Final Result</h2>
+    <table id="final-table ">
+        <!-- Table showing a sample with headers, body, and footer -->
+        <caption>Sample Table</caption>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3 ">Table Footer</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Add Math to a Table</h2>
+    <p>Use the MathJax library to include mathematical notation in your table cells. For example:</p>
+    <table id="math-table ">
+        <thead>
+            <tr>
+                <th>Expression</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>\(E = mc^2\)</td>
+                <td>Einstein's mass-energy equivalence formula</td>
+            </tr>
+            <tr>
+                <td>\(\int_a^b f(x) \,dx\)</td>
+                <td>Definite integral of function \(f(x)\) from \(a\) to \(b\)</td>
+            </tr>
+            <tr>
+                <td>\(\frac{a}{b}\)</td>
+                <td>Fraction representing division of \(a\) by \(b\)</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Add Up Totals on a Table</h2>
+    <p>Use JavaScript to calculate and display totals in your table. For example:</p>
+    <table id="totals-table ">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item A</td>
+                <td class="quantity ">2</td>
+                <td class="price ">10.00</td>
+            </tr>
+            <tr>
+                <td>Item B</td>
+                <td class="quantity ">3</td>
+                <td class="price ">15.00</td>
+            </tr>
+            <tr>
+                <td>Item C</td>
+                <td class="quantity ">1</td>
+                <td class="price ">7.50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2 ">Total</td>
+                <td id="total-price ">$72.50</td>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        let total = 0;
+                        document.querySelectorAll('#totals-table tbody tr').forEach(row => {
+                            const qty = parseFloat(row.querySelector('.quantity').textContent);
+                            const price = parseFloat(row.querySelector('.price').textContent);
+                            total += qty * price;
+                        });
+                        document.getElementById('total-price').textContent = '$' + total.toFixed(2);
+                    });
+                </script>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Common CSS Properties</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>color</td>
+                <td>Sets the text color</td>
+                <td><code>color: red;</code></td>
+            </tr>
+            <tr>
+                <td>font-family</td>
+                <td>Sets the font</td>
+                <td><code>font-family: Arial, sans-serif;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Now you're ready to start building Tables in HTML like a Pro!</h2>
+    <h4>Don't forget to customize your page with CSS Stylesheets!</h4>
+    <footer>Created By: Nicole Kelledy - Aspiring Front-End Engineer</footer>
 </body>
 
 </html>
